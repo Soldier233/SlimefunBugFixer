@@ -31,7 +31,7 @@ public class Listeners implements Listener
 			return;
 		}
 		e.setCancelled(true);
-		e.getPlayer().sendMessage(Messages.getMessages().getNoPlace().replace("&", "¡ì"));
+		e.getPlayer().sendMessage(Messages.getMessages().getNoPlace().replace("&", "ï¿½ï¿½"));
 	}
 	
 	
@@ -48,6 +48,6 @@ public class Listeners implements Listener
 			return;
 		}
 		e.setCancelled(true);
-		p.sendMessage(Messages.getMessages().getNoDrop().replace("&", "¡ì"));
+		p.sendMessage(Messages.getMessages().getNoDrop().replace("&", "ï¿½ï¿½"));
 	}
 }

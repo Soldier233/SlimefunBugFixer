@@ -1,3 +1,4 @@
 NoPlace: '&a对不起，坩埚上方禁止有方块!'
 NoDrop: '&a对不起，打开背包时禁止丢弃物品!'
 NoQuickOpen: '&a对不起，请不要过快打开背包'
+NoPlaceWithInv: '&a对不起，在背包打开时禁止放置方块'

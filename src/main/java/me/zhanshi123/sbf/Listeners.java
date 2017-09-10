@@ -15,7 +15,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class Listeners implements Listener
 {
-	@EventHandler(priority=EventPriority.LOWEST)
+	@EventHandler
 	public void onClick(PlayerInteractEvent e)
 	{
 		Action act=e.getAction();
@@ -37,6 +37,7 @@ public class Listeners implements Listener
 		else
 		{
 			e.setCancelled(true);
+			p.closeInventory();
 			p.sendMessage(Messages.getMessages().getNoQuickOpen().replace("&", "§"));
 		}
 	}
@@ -62,6 +63,18 @@ public class Listeners implements Listener
 		}
 		e.setCancelled(true);
 		e.getPlayer().sendMessage(Messages.getMessages().getNoPlace().replace("&", "§"));
+	}
+	
+	@EventHandler
+	public void onPlaceWithInv(BlockPlaceEvent e)
+	{
+		Player p=e.getPlayer();
+		if(!p.getOpenInventory().getTitle().contains(ConfigManager.getInstance().getBackpackTitle()))
+		{
+			return;
+		}
+		e.setCancelled(true);
+		e.getPlayer().sendMessage(Messages.getMessages().getNoPlaceWithInv().replace("&", "§"));
 	}
 	
 	

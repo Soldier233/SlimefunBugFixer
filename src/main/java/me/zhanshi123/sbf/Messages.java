@@ -48,4 +48,8 @@ public class Messages
 	{
 		return config.getString("NoQuickOpen");
 	}
+	public String getNoPlaceWithInv()
+	{
+		return config.getString("NoPlaceWithInv");
+	}
 }

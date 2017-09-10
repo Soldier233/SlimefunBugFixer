@@ -24,7 +24,7 @@ public class Listeners implements Listener
 		ItemStack item=e.getPlayer().getItemInHand();
 		if(item==null)
 			return;
-		if(!item.hasItemMeta())
+		if(item.getItemMeta().hasDisplayName())
 			return;
 		if(!item.getItemMeta().getDisplayName().contains(ConfigManager.getInstance().getBackpackName()))
 			return;

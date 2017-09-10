@@ -1,5 +1,6 @@
 package me.zhanshi123.sbf;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
@@ -42,5 +43,9 @@ public class Messages
 	public String getNoPlace()
 	{
 		return config.getString("NoPlace");
+	}
+	public String getNoQuickOpen()
+	{
+		return config.getString("NoQuickOpen");
 	}
 }

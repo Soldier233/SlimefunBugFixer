@@ -1,4 +1,4 @@
-package me.zhanshi123.sbf;
+package me.zhanshi123.sbf.metrics;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -58,7 +58,7 @@ public class Metrics {
     private final JavaPlugin plugin;
 
     // A list with all custom charts
-    private final List<CustomChart> charts = new ArrayList<>();
+    private final List<CustomChart> charts = new ArrayList<CustomChart>();
 
     /**
      * Class constructor.
@@ -240,7 +240,7 @@ public class Metrics {
             // Found one!
             try {
                 pluginData.add(service.getMethod("getPluginData").invoke(Bukkit.getServicesManager().load(service)));
-            } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException ignored) { }
+            } catch (Exception ignored) { }
         }
 
         data.put("plugins", pluginData);

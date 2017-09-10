@@ -1,4 +1,0 @@
-name: ${project.name}
-main: me.zhanshi123.sbf.Main
-author: Soldier
-version: ${project.version}

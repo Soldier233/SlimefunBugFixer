@@ -3,6 +3,8 @@ package me.zhanshi123.sbf;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.zhanshi123.sbf.metrics.Metrics;
+
 public class Main extends JavaPlugin
 {
 	private static Main instance=null;
@@ -16,7 +18,9 @@ public class Main extends JavaPlugin
 		new Messages();
 		Bukkit.getPluginManager().registerEvents(new Listeners(), instance);
 		new Metrics(instance);
-		Bukkit.getConsoleSender().sendMessage("§6§lSlimefunBugFixer §7>>> §a§l插件成功加载");
+		new ConfigManager();
+		new CooldownManager();
+		Bukkit.getConsoleSender().sendMessage("搂6搂lSlimefunBugFixer 搂7>>> 搂a搂l鎻掍欢鎴愬姛鍔犺浇");
 	}
 	
 }

@@ -19,6 +19,7 @@ public class Main extends JavaPlugin
 		Bukkit.getPluginManager().registerEvents(new Listeners(), instance);
 		new Metrics(instance);
 		new ConfigManager();
+		System.out.println(ConfigManager.getInstance().getBackpackName());
 		new CooldownManager();
 		Bukkit.getConsoleSender().sendMessage("§6§lSlimefunBugFixer §7>>> §a§l插件成功加载");
 	}

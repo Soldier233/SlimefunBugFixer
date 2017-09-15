@@ -21,10 +21,12 @@ public class Listeners implements Listener
 		Action act=e.getAction();
 		if(!(act.equals(Action.RIGHT_CLICK_AIR)||act.equals(Action.RIGHT_CLICK_BLOCK)))
 			return;
-		ItemStack item=e.getPlayer().getItemInHand();
+		ItemStack item=e.getItem();
 		if(item==null)
 			return;
-		if(item.getItemMeta().hasDisplayName())
+		if(!item.hasItemMeta())
+			return;
+		if(!item.getItemMeta().hasDisplayName())
 			return;
 		if(!item.getItemMeta().getDisplayName().contains(ConfigManager.getInstance().getBackpackName()))
 			return;
